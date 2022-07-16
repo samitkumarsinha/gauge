@@ -1,20 +1,37 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <ion-title>Riskometer</ion-title>
   </ion-toolbar>
 </ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+<ion-content class="ion-padding">
+  <!-- <ion-button expand="block" (click)="setOpen(true)">Open</ion-button>
+  <ion-modal [isOpen]="isModalOpen">
+    <ng-template>
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>Scheme</ion-title>
+          <ion-buttons slot="end">
+            <ion-button (click)="setOpen(false)">Close</ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content class="ion-padding">
+        <app-landing></app-landing>
+      </ion-content>
+    </ng-template>
+  </ion-modal> -->
+  <!-- <app-landing [value]='6'></app-landing>
+  <app-landing [value]='2'></app-landing>
+  <app-landing [value]='7'></app-landing>
+  <app-landing [value]='6'></app-landing>
+  <app-landing [value]='9'></app-landing> -->
+  <!-- <div *ngFor="let item of data">
+    <app-meter [value]="item.value"></app-meter>
+    {{item.value}}
+  </div> -->
+  <div *ngFor="let item of data1">
+    <app-gaugemeter [value]="item.value" [cat]="'SCHEME'"></app-gaugemeter>
+    <app-gaugemeter [value]="item.value1" [cat]="'BENCHMARK'"></app-gaugemeter>
   </div>
 </ion-content>
+

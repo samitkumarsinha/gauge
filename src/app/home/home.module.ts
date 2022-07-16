@@ -1,3 +1,7 @@
+import { GaugemeterComponent } from './gaugemeter/gaugemeter.component';
+import { MeterComponent } from './meter/meter.component';
+import { LandingComponent } from './landing/landing.component';
+
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
@@ -14,6 +18,6 @@ import { HomePageRoutingModule } from './home-routing.module';
     IonicModule,
     HomePageRoutingModule
   ],
-  declarations: [HomePage]
+  declarations: [HomePage, LandingComponent, MeterComponent, GaugemeterComponent]
 })
 export class HomePageModule {}
